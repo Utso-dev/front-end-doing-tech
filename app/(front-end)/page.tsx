@@ -1,3 +1,4 @@
+import CategoriesSection from "@/components/home/CategoriesSection";
 import FeaturedCoursesSection from "@/components/home/FeaturedCoursesSection";
 import HeroSection from "@/components/home/HeroSection";
 import PartnersStrip from "@/components/home/partners-strip";
@@ -7,15 +8,14 @@ interface CoursesPageProps {
   }>;
 }
 
-export default async function Home({
-  searchParams,
-}: CoursesPageProps) {
+export default async function Home({ searchParams }: CoursesPageProps) {
   const params = await searchParams;
   return (
     <main>
       <HeroSection />
       <PartnersStrip />
       <FeaturedCoursesSection searchParams={params} />
+      <CategoriesSection />
     </main>
   );
 }
