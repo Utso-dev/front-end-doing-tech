@@ -12,10 +12,11 @@
 @theme inline {
   --color-primaryColor: #d4fb20;
   --color-secondaryColor: #003be2;
-  --color-headerColor: #d4fb20;
+  --color-headerColor: #040819;
   --color-descriptionColor: #242528;
   --color-liteWhiteColor: #f5f5f6;
   --color-footerColor: #d4fb20;
+  --color-textColor: #4F4F4F;
   --color-blackColor: #000000;
   --color-whiteColor: #ffffff;
   --color-borderColor: #ced0d3;
