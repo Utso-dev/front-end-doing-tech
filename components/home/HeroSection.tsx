@@ -19,7 +19,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative -top-19 md:-top-23.5 w-full min-h-[calc(100vh-76px)] overflow-hidden bg-secondaryColor text-white flex flex-col justify-between pt-24 sm:pt-28 md:pt-40">
+    <section className="relative  w-full min-h-[calc(100vh-76px)] overflow-hidden bg-secondaryColor text-white flex flex-col justify-between pt-24 sm:pt-28 md:pt-40">
       <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
