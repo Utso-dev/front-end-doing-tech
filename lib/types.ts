@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface Creator {
   id: string;
   name: string;
@@ -69,6 +71,12 @@ export interface Course {
   studentAvatars?: string[];
   featured?: boolean;
   learningProgress?: number;
+}
+export interface TestimonialItem {
+  name: string;
+  role: string;
+  avatar: string | StaticImageData;
+  quote: string;
 }
 
 export type FilterCategory =
