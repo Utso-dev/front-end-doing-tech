@@ -12,7 +12,7 @@ export default function Testimonials() {
     >
       <div className="container">
         <div className=" py-12  md:pt-18.5 md:pb-14 ">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+          <div className="grid items-center gap-6 lg:gap-7 xl:gap-10 lg:grid-cols-2">
             <h2 className="font-semibold  text-3xl sm:text-4xl md:text-[44px] leading-[120%] tracking-tight text-headerColor">
               Discover What Our Community Is Saying
             </h2>
@@ -25,7 +25,7 @@ export default function Testimonials() {
             </p>
           </div>
 
-          <div className="mt-16 lg:mt-18 grid gap-10 md:grid-cols-3">
+          <div className="mt-16 lg:mt-18 grid gap-6 lg:gap-7 xl:gap-10 md:grid-cols-3">
             {testimonials.map((testimonial) => (
               <TestimonialCard
                 key={testimonial.name}

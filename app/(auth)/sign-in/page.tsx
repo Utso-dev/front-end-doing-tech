@@ -1,8 +1,5 @@
-
 import AuthLayout from "@/components/auth/AuthLayout";
 import LoginForm from "@/components/auth/LoginForm";
-
-type Errors = Partial<Record<"email" | "password", string>>;
 
 export default function SignIn() {
   return (

@@ -19,7 +19,7 @@ export function HappyStudentsCard({
 }) {
   return (
     <div
-      className={`z-20 bg-${variant === "lime" ? "primaryColor" : "white"} text-descriptionColor rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.22)] p-3 lg:p-4 border border-white/60 select-none`}
+      className={`z-20 bg-${variant === "lime" ? "primaryColor" : "white"} text-descriptionColor rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.22)] p-3 lg:p-4 border border-white/60 select-none ${className}`}
     >
       <h5 className="font-medium text-descriptionColor text-sm sm:text-base  ">
         Happy Students
