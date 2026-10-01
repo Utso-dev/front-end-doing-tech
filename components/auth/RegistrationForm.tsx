@@ -2,32 +2,32 @@
 
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
 import CustomButton from "../common/CustomButton";
 import FormField from "./FormField";
 
-type LoginFormValues = {
+type RegistrationFormValues = {
+  name: string;
   email: string;
   password: string;
 };
 
-function LoginForm() {
+function RegistrationForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormValues>();
+  } = useForm<RegistrationFormValues>();
 
-  const onSubmit = (data: LoginFormValues) => {
+  const onSubmit = (data: RegistrationFormValues) => {
     console.log(data);
   };
   return (
     <div>
       {" "}
       <div className="flex h-full flex-col">
-        <p className="text-lg text-secondaryColor">Sign In</p>
+        <p className="text-lg text-secondaryColor">Create an Account</p>
         <h1 className="mt-1 text-4xl font-semibold leading-[120%] text-descriptionColor md:text-[44px]">
-          Welcome Back
+          Welcome to ByteSpace
         </h1>
 
         <form
@@ -35,6 +35,14 @@ function LoginForm() {
           onSubmit={handleSubmit(onSubmit)}
           noValidate
         >
+          <FormField
+            label="Name"
+            type="text"
+            placeholder="Jamie Davis"
+            autoComplete="name"
+            error={errors.name?.message}
+            {...register("name", { required: "Name is required" })}
+          />
           <FormField
             label="Email"
             type="email"
@@ -53,7 +61,7 @@ function LoginForm() {
             label="Password"
             type="password"
             placeholder="********"
-            autoComplete="current-password"
+            autoComplete="new-password"
             error={errors.password?.message}
             {...register("password", {
               required: "Password is required",
@@ -68,36 +76,13 @@ function LoginForm() {
           </div>
         </form>
 
-        <div className="xl:mt-18 mt-8 md:mt-10 lg:mt-12 flex items-center gap-4 text-lg text-grayColor">
-          <span className="h-px flex-1 bg-borderColor" />
-          or
-          <span className="h-px flex-1 bg-borderColor" />
-        </div>
-
-        <div className="xl:mt-10 mt-6 md:mt-8  flex justify-center gap-4">
+        <p className="mt-auto pt-16 lg:pt-30 lg:pb-4 text-center text-grayColor">
+          Already have an account?{" "}
           <Link
-            href="https://www.facebook.com/share/19M4VurQKp/"
-            aria-label="Sign in with Facebook"
-            className="grid h-18 w-18 place-items-center rounded-2xl border border-borderColor text-descriptionColor transition hover:border-secondaryColor hover:text-secondaryColor"
-          >
-            <FaFacebook className="w-8.5 h-8.5" />
-          </Link>
-          <Link
-            href="https://www.google.com"
-            aria-label="Sign in with Google"
-            className="grid h-18 w-18 place-items-center rounded-2xl border border-borderColor text-descriptionColor transition hover:border-secondaryColor hover:text-secondaryColor"
-          >
-            <FaGoogle className="w-8.5 h-8.5" />
-          </Link>
-        </div>
-
-        <p className="mt-auto pt-16 text-center text-grayColor">
-          New user?{" "}
-          <Link
-            href="/sign-up"
+            href="/sign-in"
             className="text-secondaryColor hover:underborderColor"
           >
-            Create an account
+            Login
           </Link>
         </p>
       </div>
@@ -105,4 +90,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default RegistrationForm;

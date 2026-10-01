@@ -67,7 +67,7 @@ export default function AuthLayout({
             </div>
           </aside>
 
-          <main className="rounded-[28px] lg:col-span-6 xl:col-span-1 bg-white px-4 py-12 sm:px-16 lg:mt-22 lg:min-h-196">
+          <main className="rounded-[28px] lg:col-span-6 xl:col-span-1 bg-white px-4 py-12 sm:px-16 lg:mt-22 ">
             {children}
           </main>
         </div>
