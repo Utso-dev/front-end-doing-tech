@@ -72,7 +72,7 @@ function RegistrationForm() {
             })}
           />
           <div className="flex justify-end">
-            <CustomButton title=" Sign In " type="submit" />
+            <CustomButton title="Continue" type="submit" />
           </div>
         </form>
 
