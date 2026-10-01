@@ -1,6 +1,8 @@
 import CategoriesSection from "@/components/home/CategoriesSection";
 import CreatorSection from "@/components/home/CreatorSection";
 import FeaturedCoursesSection from "@/components/home/FeaturedCoursesSection";
+import GrowthSection from "@/components/home/GrowthSection";
+
 import HeroSection from "@/components/home/HeroSection";
 import PartnersStrip from "@/components/home/partners-strip";
 import Testimonials from "@/components/home/Testimonials";
@@ -18,6 +20,7 @@ export default async function Home({ searchParams }: CoursesPageProps) {
       <PartnersStrip />
       <FeaturedCoursesSection searchParams={params} />
       <CategoriesSection />
+      <GrowthSection />
       <CreatorSection />
       <Testimonials />
     </main>
