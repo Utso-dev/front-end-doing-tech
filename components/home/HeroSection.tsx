@@ -1,23 +1,9 @@
-import circleMask from "@/public/hero/circle.png";
-import drumMask from "@/public/hero/drum.png";
-import primaryMask from "@/public/hero/Mask Group.png";
-import triangleMask from "@/public/hero/triangle.png";
-import whiteBigMask from "@/public/hero/white-big-mask.png";
-import whiteMask from "@/public/hero/white-mask.png";
 import Image from "next/image";
 import Search from "../common/Search";
+import Shape from "../common/Shape";
+import { shapes } from "../common/ShapOBJ";
 import { HappyStudentsCard, LearningProgressCard } from "./StateCard";
 export default function HeroSection() {
-  const studentAvatars = [
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
-  ];
-
   return (
     <section className="relative  w-full min-h-[calc(100vh-76px)] overflow-hidden bg-secondaryColor text-white flex flex-col justify-between pt-24 sm:pt-28 md:pt-40">
       <div
@@ -31,43 +17,37 @@ export default function HeroSection() {
           backgroundPosition: "center -10px",
         }}
       />
-
-      <div className="absolute left-0 top-[24%] sm:top-[26%] z-10 w-28 sm:w-36 md:w-44 lg:w-60 xl:w-71.5 pointer-events-none select-none transition-transform duration-700 hover:scale-105">
-        <Image src={primaryMask} alt="primary-mask" className="w-full h-auto" />
-      </div>
-
-      <div className="absolute  right-0  top-[20%] sm:top-[22%] z-10 w-28 sm:w-36 md:w-44 lg:w-48 pointer-events-none select-none">
-        <Image src={drumMask} alt="primary-mask" className="w-full h-auto" />
-      </div>
+      <Shape
+        src={shapes.coilLime}
+        className="absolute -left-15 top-[24%] sm:top-[26%] z-10 w-28 sm:w-36 md:w-44 lg:w-50 xl:w-61.5 pointer-events-none select-none transition-transform duration-700 hover:scale-105"
+      />
+      <Shape
+        src={shapes.cylinderLime}
+        className="absolute  -right-20  top-[20%] sm:top-[22%] z-10 w-28 sm:w-36 md:w-44 lg:w-48 pointer-events-none select-none"
+        delay={0.5}
+      />
 
       <div className="relative z-20 max-w-233.75 mx-auto px-4 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-white leading-[120%] drop-shadow-sm">
           Get Access to Hundreds Courses Available
         </h1>
 
-        <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-liteWhiteColor   font-normal leading-relaxed">
+        <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-liteWhiteColor md:px-20 lg:px-0 px-6  font-normal leading-relaxed">
           Unlock your creativity, gain valuable knowledge, and grow your
           business with our wide range of courses.
         </p>
         <div className="mt-7 md:mt-10 lg:mt-15 relative">
-          <div className="absolute right-[-8%] sm:right-[-10%] md:right-[5%] lg:-right-22 top-10 lg:top-4 z-10 w-18 sm:w-24 md:w-25 lg:w-47 pointer-events-none select-none">
-            <Image
-              src={triangleMask}
-              width={200}
-              height={200}
-              alt="primary-mask"
-              className="w-full h-auto"
-            />
-          </div>
-          <div className="absolute left-[-8%] sm:left-[-10%] md:left-[-2%] lg:-left-22 top-10 lg:top-4 z-10 w-24 sm:w-20 md:w-25 lg:w-44 pointer-events-none select-none">
-            <Image
-              src={whiteMask}
-              alt="primary-mask"
-              width={200}
-              height={200}
-              className="w-full h-auto"
-            />
-          </div>
+          <Shape
+            src={shapes.coneWhite}
+            className="absolute right-[-8%] sm:right-[-10%] md:right-[5%] lg:right-5 top-10 lg:top-4 z-10 w-13 sm:w-18 md:w-18 lg:w-22 xl:w-28 rotate-30 pointer-events-none select-none"
+            delay={2}
+          />
+          <Shape
+            src={shapes.springWhite}
+            className="absolute left-[-6%] sm:left-[-10%] md:left-[-2%] lg:left-0 top-12 lg:top-4 z-10 w-13 sm:w-15 md:w-18 lg:w-22 xl:w-28 pointer-events-none select-none"
+            delay={1}
+          />
+
           <Search />
         </div>
       </div>
@@ -82,22 +62,17 @@ export default function HeroSection() {
             priority
             className="w-full h-auto  block drop-shadow-2xl"
           />
-          <div className="absolute -left-10 md:-left-40 lg:-left-55 xl:-left-86 xl:top-45   md:top-25 z-20 bottom-[4%]   w-32 sm:w-40 md:w-40 lg:w-60.75 xl:w-65.75 pointer-events-none select-none">
-            <Image
-              src={circleMask}
-              alt="primary-mask"
-              width={343}
-              height={343}
-              className="w-full h-auto"
-            />
-          </div>
-          <div className="absolute lg:-right-95 -right-10 md:-right-40 -rotate-5 top-[55%] md:top-[20%] lg:top-[32%] z-10 w-22 sm:w-36 md:w-40 lg:w-60 xl:w-71.5 pointer-events-none select-none">
-            <Image
-              src={whiteBigMask}
-              alt="primary-mask"
-              className="w-full h-auto"
-            />
-          </div>
+          <Shape
+            src={shapes.circleWhiteIcon}
+            className="absolute -left-10 md:-left-40 lg:-left-55 xl:-left-80 xl:top-45   md:top-25 z-20 bottom-[4%]   w-20 sm:w-25 md:w-30 lg:w-40.75 xl:w-55.75 pointer-events-none select-none"
+            delay={3}
+          />
+
+          <Shape
+            src={shapes.springWhite}
+            className="absolute lg:-right-75 -right-10 md:-right-40 -rotate-5 top-[55%] md:top-[20%] lg:top-[32%] z-10  w-16 sm:w-22 md:w-36 lg:w-42  pointer-events-none select-none"
+            delay={3}
+          />
 
           <div className="absolute lg:-left-5  -left-2 md:-left-16 top-[3%] sm:top-[16%] md:top-[17%] lg:top-[21%] z-30 bg-white text-descriptionColor rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.22)]  p-3 sm:p-4 border border-white/60 select-none">
             <h5 className="font-medium text-descriptionColor text-sm sm:text-base leading-tight tracking-tight">

@@ -17,7 +17,7 @@ export default function CreatorSection() {
         delay={2}
       />
       <Shape
-        src={shapes.torusLime}
+        src={shapes.circleSecondIcon}
         className="xl:-bottom-24 xl:left-16 md:w-30 -bottom-10 left-8 md:left-19  w-20  xl:w-60 "
         delay={0.5}
       />
@@ -30,7 +30,6 @@ export default function CreatorSection() {
       <Shape
         src={shapes.coilLime}
         className="md:-bottom-10 -bottom-7 right-8 md:right-16  w-15 md:w-30 -rotate-44 lg:40  xl:w-48  "
-       
         delay={3}
       />
       <div className="container">

@@ -46,7 +46,7 @@ export default function AuthLayout({
               </div>
 
               <Shape
-                src={shapes.torusLime}
+                src={shapes.circleSecondIcon}
                 className="lg:left-15 md:left-25 top-7.5 w-20 md:w-25 lg:w-28"
                 rotate={-20}
               />
