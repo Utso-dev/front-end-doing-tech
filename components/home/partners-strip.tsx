@@ -21,7 +21,7 @@ const PARTNERS = [
 
 export default function PartnersStrip() {
   return (
-    <section className="w-full bg-liteWhiteColor border-y  py-10 lg:py-20  ">
+    <section className="w-full bg-liteWhiteColor border-y py-6 md:py-10 xl:py-20  ">
       <div className="w-full container flex relative items-center">
         <Marquee
           speed={40}
@@ -34,14 +34,14 @@ export default function PartnersStrip() {
           {PARTNERS.map((src, index) => (
             <div
               key={index}
-              className="flex items-center px-4 md:px-7 lg:px-8 justify-center shrink-0 opacity-75 hover:opacity-100 transition-all cursor-pointer "
+              className="flex items-center px-2 md:px-4 lgxl:px-8 justify-center shrink-0 opacity-75 hover:opacity-100 transition-all cursor-pointer "
             >
               <Image
                 src={src}
                 width={200}
                 height={100}
                 alt={`Partner logo ${index + 1}`}
-                className="h-full w-auto object-contain max-w-32.5 sm:max-w-42"
+                className="h-full  object-contain w-20.5 md:w-30 lg:w-40 xl:w-42"
               />
             </div>
           ))}

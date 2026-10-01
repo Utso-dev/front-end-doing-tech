@@ -40,10 +40,12 @@ export default function CategoriesSection() {
               href="#courses"
               className="flex aspect-square flex-col items-center justify-center gap-5 rounded-3xl border border-line bg-white transition hover:-translate-y-1 hover:border-borderColor hover:shadow-[0_20px_40px_-24px_rgb(0_59_226/0.5)]"
             >
-              <span className="grid h-15 w-15 place-items-center rounded-full bg-primaryColor">
+              <div className="grid h-15 w-15 place-items-center rounded-full bg-primaryColor">
                 <Icon className="h-7 w-7 text-descriptionColor" />
+              </div>
+              <span className="text-lg md:text-xl text-descriptionColor">
+                {label}
               </span>
-              <span className="text-lg md:text-xl text-descriptionColor">{label}</span>
             </Link>
           ))}
         </div>
