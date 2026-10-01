@@ -3,6 +3,18 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+
+@keyframes navbar-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .container {
   max-width: 1242px;
   padding: 0 16px;
@@ -12,10 +24,11 @@
 @theme inline {
   --color-primaryColor: #d4fb20;
   --color-secondaryColor: #003be2;
-  --color-headerColor: #d4fb20;
+  --color-headerColor: #040819;
   --color-descriptionColor: #242528;
   --color-liteWhiteColor: #f5f5f6;
   --color-footerColor: #d4fb20;
+  --color-textColor: #4f4f4f;
   --color-blackColor: #000000;
   --color-whiteColor: #ffffff;
   --color-borderColor: #ced0d3;
@@ -148,5 +161,39 @@
   h4,
   h6 {
     font-family: var(--font-poppins);
+  }
+}
+
+/* Custom transitions */
+.smooth-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bg-grid {
+  background-color: var(--color-secondaryColor);
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.12) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: -1px -1px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-14px) rotate(var(--r, 0deg));
+  }
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
   }
 }

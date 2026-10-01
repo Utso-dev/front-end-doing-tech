@@ -1,0 +1,838 @@
+import { Course, Creator, Review } from "@/lib/types";
+import user1 from "@/public/image/user1.png";
+import user2 from "@/public/image/user2.png";
+import user3 from "@/public/image/user3.png";
+export const creatorsData: Record<string, Creator> = {
+  "purepearl-studio": {
+    id: "purepearl-studio",
+    name: "PurePearl Studio",
+    role: "Passionate UI/UX, Web designer",
+    tagline: "Professional Creator",
+    bio: "Welcome to the creative world of PurePearl Studio. Here, you'll discover the passion, expertise, and inspiration that drive my creative journey. Let's explore and learn together! Dive into my creative portfolio, showcasing a glimpse of my artistic endeavors. From digital designs to multimedia projects, each piece tells a unique story. Explore the world of creativity with me.",
+    avatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80",
+    coverImage:
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&auto=format&fit=crop&q=80",
+    productsCount: 3,
+    followersCount: 12,
+    isFollowing: false,
+    rating: 4.8,
+    reviewsCount: 172,
+    courses: [
+      "learn-figma-from-basic",
+      "build-digital-asset",
+      "the-power-of-big-data",
+      "balancing-productivity",
+      "mastering-money-management",
+      "from-idea-to-startup",
+    ],
+  },
+  "albert-flores": {
+    id: "albert-flores",
+    name: "Albert Flores",
+    role: "Senior Product Designer",
+    tagline: "Design Lead at TechCorp",
+    bio: "Passionate educator and designer with over 10 years of experience building modern digital design systems, user interfaces, and mobile applications for global brands.",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80",
+    productsCount: 6,
+    followersCount: 340,
+    isFollowing: true,
+    rating: 4.9,
+    reviewsCount: 420,
+    courses: ["learn-figma-from-basic", "the-power-of-big-data"],
+  },
+  "cody-fisher": {
+    id: "cody-fisher",
+    name: "Cody Fisher",
+    role: "Fullstack Architect",
+    tagline: "Web Development Mentor",
+    bio: "Helping developers transition from beginners to building production ready software with modern scalable frameworks and clean architecture.",
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80",
+    productsCount: 4,
+    followersCount: 890,
+    isFollowing: false,
+    rating: 4.7,
+    reviewsCount: 230,
+    courses: ["balancing-productivity", "from-idea-to-startup"],
+  },
+};
+
+export const sampleReviews: Review[] = [
+  {
+    id: "rev-1",
+    userName: "PurePearl Studio",
+    userRole: "UI/UX Designer",
+    avatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    rating: 5,
+    timeAgo: "4 year ago",
+    content:
+      "The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!",
+  },
+  {
+    id: "rev-2",
+    userName: "Albert Flores",
+    userRole: "UI/UX Designer",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    rating: 5,
+    timeAgo: "3 year ago",
+    content:
+      "This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!",
+  },
+  {
+    id: "rev-3",
+    userName: "Cody Fisher",
+    userRole: "UI/UX Designer",
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+    rating: 5,
+    timeAgo: "4 year ago",
+    content:
+      "The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process.",
+  },
+  {
+    id: "rev-4",
+    userName: "Brooklyn Simmons",
+    userRole: "UI/UX Designer",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+    rating: 5,
+    timeAgo: "4 year ago",
+    content:
+      "The lessons on optimizing digital assets for various platforms were particularly insightful. The course adapts to the evolving digital landscape, and the engaging content kept me motivated throughout.",
+  },
+  {
+    id: "rev-5",
+    userName: "Esther Howard",
+    userRole: "Product Manager",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80",
+    rating: 4,
+    timeAgo: "2 year ago",
+    content:
+      "Clear explanations and very well-structured content. It helped our cross-functional teams establish shared asset libraries and streamline handoffs.",
+  },
+];
+
+export const coursesData: Course[] = [
+  {
+    id: "build-digital-asset",
+    title: "Build Digital Asset",
+    subtitle: "Unlock the Power of Digital Creation with Expert Guidance",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Intermediate",
+    category: "UI/UX Design",
+    rating: 4.8,
+    reviewsCount: 172,
+    studentsCount: 199,
+    price: 25,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+    previewVideoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    lessonsCount: 112,
+    totalDuration: "24 hours",
+    commentsCount: 59,
+    featured: true,
+    learningProgress: 55,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Embark on an enlightening exploration into the world of digital creation with our comprehensive course, 'Build Digital Assets: A Comprehensive Guide.' This transformative learning experience invites you to delve deep into the intricacies of crafting impactful digital content. From laying the groundwork with foundational concepts to mastering advanced techniques, this guide is meticulously curated to empower you with the skills essential for navigating the dynamic landscape of digital asset creation.",
+      "In the initial modules, you'll establish a solid foundation by immersing yourself in the foundational concepts that form the backbone of digital asset creation. Understand the fundamental elements that constitute compelling digital content and gain proficiency in leveraging these elements to communicate effectively in the digital realm.",
+      "As you progress through the course, you'll ascend to higher levels of expertise, delving into the nuances of design principles that drive impactful creations. Uncover the secrets behind effective visual communication, exploring color theory, typography, and layout strategies that elevate your digital assets to new heights. Engage in hands-on exercises that reinforce your understanding, allowing you to apply these principles in practical scenarios.",
+    ],
+    sneakPeakImages: [
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=600&auto=format&fit=crop&q=80",
+    ],
+    keyPoints: [
+      "Foundational Concepts",
+      "Design Principles Mastery",
+      "Advanced Techniques in Digital Creation",
+      "Project Showcase and Critique",
+      "Optimizing for Various Platforms",
+      "Digital Asset Management Best Practices",
+      "Monetization Strategies",
+      "Capstone Project: Building Your Portfolio",
+    ],
+    includes: [
+      "Learning Resources",
+      "Quality Lesson Videos",
+      "Certificate of Completion",
+      "Private Consultation",
+    ],
+    modules: [
+      {
+        id: "mod-1",
+        number: 1,
+        title: "Module 1: Introduction to Digital Assets",
+        description:
+          "Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools'. Dive into the essentials of digital asset creation.",
+        duration: "3 hours",
+        lessons: [
+          {
+            id: "les-1",
+            title: "Introduction to Digital Assets",
+            duration: "12 mins",
+            isCompleted: true,
+            isPreview: true,
+          },
+          {
+            id: "les-2",
+            title: "Navigating Design Software & Tools",
+            duration: "18 mins",
+            isCompleted: true,
+            isPreview: true,
+          },
+          {
+            id: "les-3",
+            title: "Vector vs Raster Workflows",
+            duration: "24 mins",
+            isCompleted: true,
+          },
+          {
+            id: "les-4",
+            title: "Structuring File Assets & Exports",
+            duration: "15 mins",
+            isCompleted: true,
+          },
+        ],
+      },
+      {
+        id: "mod-2",
+        number: 2,
+        title: "Module 2: Design Principles for Impact",
+        description:
+          "Master the principles that drive impactful designs with lessons such as 'Color Theory in Digital Design' and 'Typography Essentials'. Elevate your visual communication skills.",
+        duration: "4 hours",
+        lessons: [
+          {
+            id: "les-5",
+            title: "Design Principles for Impacts",
+            duration: "21 mins",
+            isCompleted: true,
+          },
+          {
+            id: "les-6",
+            title: "Color Theory & Contrast in Modern UI",
+            duration: "25 mins",
+            isCompleted: true,
+          },
+          {
+            id: "les-7",
+            title: "Typography Essentials & Hierarchy",
+            duration: "30 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-8",
+            title: "Spacing, Grids and Visual Rhythms",
+            duration: "22 mins",
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        id: "mod-3",
+        number: 3,
+        title: "Module 3: Advanced Techniques in Digital Creation",
+        description:
+          "Explore complex illustration, 3D asset generation, motion graphics basics, and interactive prototype pipelines.",
+        duration: "3.5 hours",
+        lessons: [
+          {
+            id: "les-9",
+            title: "Advanced Techniques in Digital Creation",
+            duration: "16 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-10",
+            title: "3D Asset Modeling & Texturing",
+            duration: "35 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-11",
+            title: "Micro-interactions & State Transitions",
+            duration: "28 mins",
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        id: "mod-4",
+        number: 4,
+        title: "Module 4: User-Centric Design Strategies",
+        description:
+          "Understand 'Design Thinking in Digital Creation' and delve into 'User Experience (UX) Essentials'. Craft digital assets with a focus on user-centric design.",
+        duration: "3 hours",
+        lessons: [
+          {
+            id: "les-12",
+            title: "User Persona Research & Journey Maps",
+            duration: "20 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-13",
+            title: "Information Architecture & Wireframing",
+            duration: "32 mins",
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        id: "mod-5",
+        number: 5,
+        title: "Module 5: Interactive Media and Engagement",
+        description:
+          "Engage your audience with lessons like 'Creating Interactive Presentations' and 'Integrating Multimedia Elements'. Master the art of creating immersive digital experiences.",
+        duration: "3.5 hours",
+        lessons: [
+          {
+            id: "les-14",
+            title: "Dynamic Prototype Animation",
+            duration: "25 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-15",
+            title: "Multimedia Asset Optimization",
+            duration: "30 mins",
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        id: "mod-6",
+        number: 6,
+        title: "Module 6: Project Showcase and Critique",
+        description:
+          "Perfect your presentation skills with 'Effective Presentation Techniques' and embrace collaboration with 'Peer Critique and Collaboration'. Showcase your work with confidence.",
+        duration: "3 hours",
+        lessons: [
+          {
+            id: "les-16",
+            title: "Live Feedback & Iterative Refinements",
+            duration: "40 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-17",
+            title: "Polishing Case Studies for Portfolios",
+            duration: "25 mins",
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        id: "mod-7",
+        number: 7,
+        title: "Module 7: Optimizing Digital Assets for Various Platforms",
+        description:
+          "Adapt your digital creations for 'Mobile Platforms' and optimize for 'Social Media'. Ensure widespread accessibility and engagement across diverse digital landscapes.",
+        duration: "4 hours",
+        lessons: [
+          {
+            id: "les-18",
+            title: "Responsive Export Presets & Scalability",
+            duration: "22 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-19",
+            title: "Social Platform Asset Guidelines",
+            duration: "18 mins",
+            isCompleted: false,
+          },
+          {
+            id: "les-20",
+            title: "Final Capstone Certification Overview",
+            duration: "15 mins",
+            isCompleted: false,
+          },
+        ],
+      },
+    ],
+    reviews: sampleReviews,
+  },
+  {
+    id: "learn-figma-from-basic",
+    title: "Learn Figma from Basic",
+    subtitle:
+      "Master vector networks, auto-layout, design tokens, and prototyping from scratch",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Beginner",
+    category: "UI/UX Design",
+    rating: 4.5,
+    reviewsCount: 89,
+    studentsCount: 145,
+    price: 25,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 17,
+    totalDuration: "2 hours",
+    commentsCount: 59,
+    featured: true,
+    learningProgress: 30,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Figma is the industry-standard UI/UX collaborative design tool. In this hands-on starter course, you will learn the core mechanics of vector drawings, components, variants, variables, and responsive layout.",
+    ],
+    sneakPeakImages: [
+      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80",
+    ],
+    keyPoints: [
+      "Auto Layout v5 & Responsive Constraints",
+      "Design Systems & Reusable Component Sets",
+      "Variables, Color Modes, and Tokens",
+    ],
+    includes: [
+      "Lifetime Course Access",
+      "Source Figma Files",
+      "Community Forum Access",
+    ],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "the-power-of-big-data",
+    title: "the Power of Big Data",
+    subtitle:
+      "Transform raw data into beautiful analytics dashboards & predictive business insights",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Beginner",
+    category: "Development",
+    rating: 4.5,
+    reviewsCount: 114,
+    studentsCount: 260,
+    price: 25,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 17,
+    totalDuration: "2 hours",
+    commentsCount: 59,
+    featured: true,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Learn modern data visualization pipelines, real-time metrics dashboards, and statistical models.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Data Pipelines",
+      "Visual Dashboards",
+      "Statistical Forecasting",
+    ],
+    includes: ["Full Dataset Downloads", "Dashboard Templates", "Certificate"],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "balancing-productivity",
+    title: "Balancing Productivity and Life",
+    subtitle:
+      "Establish sustainable creative workflows, eliminate burnout, and optimize output",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Beginner",
+    category: "Business",
+    rating: 4.5,
+    reviewsCount: 95,
+    studentsCount: 180,
+    price: 25,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 17,
+    totalDuration: "2 hours",
+    commentsCount: 59,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Organize your work life balance, master time blocking, and maintain peak creative focus.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Deep Work Systems",
+      "Mindful Time Blocking",
+      "Energy Management",
+    ],
+    includes: [
+      "Notion Templates",
+      "Productivity Checklists",
+      "Weekly Workbooks",
+    ],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "mastering-money-management",
+    title: "Mastering Money Management",
+    subtitle:
+      "Personal finance, freelancer cash flow budgeting, and wealth compounding foundations",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Beginner",
+    category: "Business",
+    rating: 4.5,
+    reviewsCount: 140,
+    studentsCount: 310,
+    price: 25,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 17,
+    totalDuration: "2 hours",
+    commentsCount: 59,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Gain confidence with cash flow, investments, pricing client projects, and tax deductions.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Budgeting Spreadsheets",
+      "Compound Investment Basics",
+      "Freelance Rate Calculator",
+    ],
+    includes: ["Financial Models", "Excel & Sheets Templates", "Q&A Sessions"],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "from-idea-to-startup",
+    title: "From Idea to Startup Success",
+    subtitle:
+      "Validate your concept, build minimum viable products, and acquire initial customers",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Beginner",
+    category: "Marketing",
+    rating: 4.5,
+    reviewsCount: 168,
+    studentsCount: 420,
+    price: 25,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 17,
+    totalDuration: "2 hours 16 mins",
+    commentsCount: 59,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "A step-by-step roadmap from ideation to launching and scaling digital startup products.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Market Validation",
+      "Rapid Prototyping",
+      "Go-To-Market Playbook",
+    ],
+    includes: [
+      "Pitch Deck Slides",
+      "Customer Interview Scripts",
+      "Founder Community",
+    ],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "modern-music-production",
+    title: "Modern Electronic Music Production",
+    subtitle:
+      "Produce club-ready tracks from sound design to final mixing and mastering",
+    creatorId: "albert-flores",
+    creator: creatorsData["albert-flores"],
+    level: "Intermediate",
+    category: "Music",
+    rating: 4.9,
+    reviewsCount: 205,
+    studentsCount: 380,
+    price: 35,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 24,
+    totalDuration: "6 hours",
+    commentsCount: 88,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Synthesizer sound design, beat arrangements, compression, EQ, and mastering chains.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Ableton Live Mastery",
+      "Vocal Processing Chains",
+      "Mastering for Streaming",
+    ],
+    includes: ["Sample Pack", "Ableton Project Files", "Stem Downloads"],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "creative-drawing-painting",
+    title: "Digital Drawing & Concept Painting",
+    subtitle:
+      "Master brush techniques, lighting, atmospheric perspective, and character sketches",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Beginner",
+    category: "Drawing & Painting",
+    rating: 4.8,
+    reviewsCount: 156,
+    studentsCount: 290,
+    price: 29,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 19,
+    totalDuration: "4 hours",
+    commentsCount: 64,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Learn how to sketch, paint digital landscapes, and create character concept art.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Brush Settings & Blending",
+      "Light & Shadow Rendering",
+      "Anatomy Basics",
+    ],
+    includes: [
+      "50+ Custom Procreate Brushes",
+      "High Res PSDs",
+      "Feedback Sessions",
+    ],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "3d-motion-animation",
+    title: "3D Motion Graphics & Animation",
+    subtitle:
+      "Create breathtaking title sequences, dynamic simulations, and futuristic renders",
+    creatorId: "cody-fisher",
+    creator: creatorsData["cody-fisher"],
+    level: "Advanced",
+    category: "Animation",
+    rating: 4.9,
+    reviewsCount: 310,
+    studentsCount: 650,
+    price: 49,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 32,
+    totalDuration: "9 hours",
+    commentsCount: 142,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Step-by-step 3D animation, lighting, camera choreography, and post-processing.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Cinema 4D / Blender Workflows",
+      "Octane & Redshift Lighting",
+      "After Effects Compositing",
+    ],
+    includes: ["Full 3D Project Files", "Lighting HDRIs", "Render Presets"],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "viral-social-media-growth",
+    title: "Viral Social Media Strategy & Growth",
+    subtitle:
+      "Hook audiences, craft viral short-form video scripts, and build an organic audience",
+    creatorId: "albert-flores",
+    creator: creatorsData["albert-flores"],
+    level: "Beginner",
+    category: "Social Media",
+    rating: 4.7,
+    reviewsCount: 190,
+    studentsCount: 510,
+    price: 25,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 15,
+    totalDuration: "3 hours",
+    commentsCount: 77,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Proven content frameworks, script blueprints, analytics decoding, and growth tactics.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Short-form Video Frameworks",
+      "Algorithm Psychology",
+      "Monetization Funnels",
+    ],
+    includes: ["Viral Hook Formulas", "Content Calendar", "CapCut Templates"],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "creative-growth-marketing",
+    title: "Creative Marketing & Brand Strategy",
+    subtitle:
+      "Position your brand, run high-converting ad experiments, and craft irresistible offers",
+    creatorId: "purepearl-studio",
+    creator: creatorsData["purepearl-studio"],
+    level: "Intermediate",
+    category: "Creative Marketing",
+    rating: 4.6,
+    reviewsCount: 130,
+    studentsCount: 275,
+    price: 30,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 18,
+    totalDuration: "3 hours",
+    commentsCount: 45,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Learn actionable marketing psychology, copywriting principles, and omnichannel positioning.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Brand Positioning Matrix",
+      "Copywriting Swipe File",
+      "Performance Ad Creative",
+    ],
+    includes: [
+      "Marketing Playbooks",
+      "Ad Template Files",
+      "Audience Persona Sheets",
+    ],
+    modules: [],
+    reviews: sampleReviews,
+  },
+  {
+    id: "mastering-culinary-arts",
+    title: "Mastering Modern Culinary Arts",
+    subtitle:
+      "From knife skills and mother sauces to plating aesthetics and flavor pairings",
+    creatorId: "albert-flores",
+    creator: creatorsData["albert-flores"],
+    level: "All Levels",
+    category: "Cooking",
+    rating: 4.9,
+    reviewsCount: 340,
+    studentsCount: 780,
+    price: 39,
+    pricingType: "lifetime",
+    thumbnail:
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&auto=format&fit=crop&q=80",
+    lessonsCount: 28,
+    totalDuration: "7 hours",
+    commentsCount: 110,
+    studentAvatars: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+    ],
+    description: [
+      "Professional culinary techniques made accessible for ambitious home chefs.",
+    ],
+    sneakPeakImages: [],
+    keyPoints: [
+      "Knife Precision & Safety",
+      "Sauce Chemistry",
+      "Gourmet Plating Aesthetics",
+    ],
+    includes: [
+      "Recipe Book PDF",
+      "Kitchen Equipment Guide",
+      "Technique Cheat-sheet",
+    ],
+    modules: [],
+    reviews: sampleReviews,
+  },
+];
+
+export const testimonials = [
+  {
+    name: 'Sarah M.',
+    role: 'Enthusiastic Learner',
+    avatar: user1,
+    quote:
+      `"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."`,
+  },
+  {
+    name: 'James L.',
+    role: 'Lifelong Learner',
+    avatar: user2,
+    quote:
+      `"I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."`,
+  },
+  {
+    name: 'Alex B.',
+    role: 'Inspired Creator',
+    avatar: user3,
+    quote:
+      `"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally."`,
+  },
+]
+
+export const categoryPills: string[] = [
+  "Featured",
+  "Music",
+  "Drawing & Painting",
+  "Marketing",
+  "Animation",
+  "Social Media",
+  "UI/UX Design",
+  "Creative Marketing",
+  "Cooking",
+];
