@@ -1,12 +1,13 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { CartIcon } from "@/public/Icons";
 import mainLogo from "@/public/mainlogo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { HiOutlineBars3, HiOutlineShoppingBag, HiXMark } from "react-icons/hi2";
+import { useEffect, useState } from "react";
+import { HiOutlineBars3, HiXMark } from "react-icons/hi2";
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -17,9 +18,25 @@ const menuItems = [
 export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 left-0 w-full py-5 md:py-7 z-50">
+    <header
+      className={cn(
+        "sticky left-0 top-0 z-50 w-full py-5 transition-all duration-300 md:py-7",
+        isScrolled &&
+          "animate-[navbar-reveal_1020ms_ease-out] bg-secondaryColor/50 shadow-lg backdrop-blur-md",
+      )}
+    >
       <div className="container flex items-center justify-between ">
         {/* Logo */}
         <div className="flex items-center">
@@ -80,7 +97,7 @@ export default function Navbar() {
             aria-label="Shopping Cart"
             className="text-white hover:text-white/80 transition-colors p-1"
           >
-            <HiOutlineShoppingBag className="w-5 h-5 lg:w-[22px] lg:h-[22px]" />
+            <CartIcon className="w-5 h-5 " />
           </Link>
         </div>
 
@@ -91,7 +108,7 @@ export default function Navbar() {
             aria-label="Shopping Cart"
             className="text-white hover:text-white/80 transition-colors p-1"
           >
-            <HiOutlineShoppingBag className="w-5 h-5" />
+            <CartIcon className="w-5 h-5" />
           </Link>
 
           <button
