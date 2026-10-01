@@ -18,7 +18,9 @@ export function HappyStudentsCard({
   variant?: "white" | "lime";
 }) {
   return (
-    <div className=" z-20 bg-white text-descriptionColor rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.22)] p-3 lg:p-4 border border-white/60 select-none">
+    <div
+      className={`z-20 bg-${variant === "lime" ? "primaryColor" : "white"} text-descriptionColor rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.22)] p-3 lg:p-4 border border-white/60 select-none`}
+    >
       <h5 className="font-medium text-descriptionColor text-sm sm:text-base  ">
         Happy Students
       </h5>
@@ -37,7 +39,9 @@ export function HappyStudentsCard({
             className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10.75 lg:h-10.75  rounded-full object-cover shadow-xs"
           />
         ))}
-        <h5 className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10.75 lg:h-10.75 rounded-full bg-primaryColor text-descriptionColor font-medium  text-xs flex items-center justify-center  shadow-xs">
+        <h5
+          className={`w-7 h-7 sm:w-8 sm:h-8 lg:w-10.75 lg:h-10.75 rounded-full ${variant === "lime" ? "bg-descriptionColor text-white" : "bg-primaryColor"} text-descriptionColor font-medium  text-xs flex items-center justify-center  shadow-xs`}
+        >
           2K+
         </h5>
       </div>

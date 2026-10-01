@@ -129,7 +129,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div
         className={cn(
-          "md:hidden fixed top-0 right-0 h-full w-[280px] bg-[#002fad] text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col justify-between p-6",
+          "md:hidden fixed top-0 right-0 h-full w-70 bg-secondaryColor text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col justify-between p-6",
           menuOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
@@ -160,7 +160,7 @@ export default function Navbar() {
                 className={cn(
                   "text-base py-1 transition-colors",
                   pathname === item.href
-                    ? "text-[#d4fb20] font-semibold"
+                    ? "text-primaryColor font-semibold"
                     : "text-white/90 hover:text-white",
                 )}
               >
@@ -181,7 +181,7 @@ export default function Navbar() {
           <Link
             href="/join-us"
             onClick={() => setMenuOpen(false)}
-            className="w-full text-center py-2.5 rounded-lg bg-[#d4fb20] text-black font-semibold text-sm hover:bg-[#c3ea15] transition"
+            className="w-full text-center py-2.5 rounded-lg bg-primaryColor text-black font-semibold text-sm hover:bg-primaryColor/90 transition"
           >
             Join Us
           </Link>
