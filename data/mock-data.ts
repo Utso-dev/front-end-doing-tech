@@ -385,7 +385,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 17,
-    totalDuration: "2 hours 16 mins",
+    totalDuration: "2 hours",
     commentsCount: 59,
     featured: true,
     learningProgress: 30,
@@ -431,7 +431,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 17,
-    totalDuration: "2 hours 16 mins",
+    totalDuration: "2 hours",
     commentsCount: 59,
     featured: true,
     studentAvatars: [
@@ -469,7 +469,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 17,
-    totalDuration: "2 hours 16 mins",
+    totalDuration: "2 hours",
     commentsCount: 59,
     studentAvatars: [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
@@ -510,7 +510,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 17,
-    totalDuration: "2 hours 16 mins",
+    totalDuration: "2 hours",
     commentsCount: 59,
     studentAvatars: [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
@@ -588,7 +588,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 24,
-    totalDuration: "6 hours 40 mins",
+    totalDuration: "6 hours",
     commentsCount: 88,
     studentAvatars: [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
@@ -624,7 +624,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 19,
-    totalDuration: "4 hours 10 mins",
+    totalDuration: "4 hours",
     commentsCount: 64,
     studentAvatars: [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
@@ -664,7 +664,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 32,
-    totalDuration: "9 hours 20 mins",
+    totalDuration: "9 hours",
     commentsCount: 142,
     studentAvatars: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
@@ -700,7 +700,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 15,
-    totalDuration: "3 hours 15 mins",
+    totalDuration: "3 hours",
     commentsCount: 77,
     studentAvatars: [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
@@ -736,7 +736,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 18,
-    totalDuration: "3 hours 45 mins",
+    totalDuration: "3 hours",
     commentsCount: 45,
     studentAvatars: [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
@@ -776,7 +776,7 @@ export const coursesData: Course[] = [
     thumbnail:
       "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&auto=format&fit=crop&q=80",
     lessonsCount: 28,
-    totalDuration: "7 hours 30 mins",
+    totalDuration: "7 hours",
     commentsCount: 110,
     studentAvatars: [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",

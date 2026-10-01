@@ -25,13 +25,13 @@ export function CourseCard({ course }: CourseCardProps) {
 
         <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between gap-1 text-[10px] text-white font-medium">
           <div className="flex items-center gap-1.5 w-full justify-between">
-            <span className="font-satoshi font-medium text-[12px] leading-[120%] text-center align-middle px-2.5 py-1 rounded-full bg-[#F6F6F699] text-textColor border border-white/10">
+            <span className=" font-medium text-[12px] leading-[120%] text-center align-middle px-2.5 py-1 rounded-full bg-[#F6F6F6]/50 text-textColor border border-white/10 backdrop-blur-sm">
               {course.lessonsCount} Lessons
             </span>
-            <span className="font-satoshi font-medium text-[12px] leading-[120%] text-center align-middle px-2.5 py-1 rounded-full bg-[#F6F6F699] text-textColor border border-white/10">
+            <span className=" font-medium text-[12px] leading-[120%] text-center align-middle px-2.5 py-1 rounded-full bg-[#F6F6F6]/50 text-textColor border border-white/10 backdrop-blur-sm">
               {course.totalDuration}
             </span>
-            <span className="font-satoshi font-medium text-[12px] leading-[120%] text-center align-middle px-2.5 py-1 rounded-full bg-[#F6F6F699] text-textColor border border-white/10">
+            <span className=" font-medium text-[12px] leading-[120%] text-center align-middle px-2.5 py-1 rounded-full bg-[#F6F6F6]/50 text-textColor border border-white/10 backdrop-blur-sm">
               {course.commentsCount} Comments
             </span>
           </div>
